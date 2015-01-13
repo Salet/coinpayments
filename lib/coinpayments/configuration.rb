@@ -1,4 +1,4 @@
-module CoinPayments
+module Coinpayments
   class Configuration
     attr_accessor :version, :base_uri, :merchant_id, :public_api_key, :private_api_key
 

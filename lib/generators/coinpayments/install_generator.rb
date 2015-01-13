@@ -1,6 +1,6 @@
-module CoinPayments
+module Coinpayments
   class InstallGenerator < Rails::Generators::Base
-    source_root File.expand_path("../../templates", __FILE__)
+    source_root File.expand_path("../templates", __FILE__)
     desc "Creates CoinPayments initializer for your application"
 
     def copy_initializer

@@ -4,7 +4,7 @@ require "hashie/mash"
 require "httparty"
 
 
-module CoinPayments
+module Coinpayments
 
   class << self
     attr_accessor :configuration
@@ -22,16 +22,16 @@ module CoinPayments
     end    
 
     def self.required_params
-      { version: CoinPayments.configuration.version, key: CoinPayments.configuration.public_api_key }
+      { version: configuration.version, key: configuration.public_api_key }
     end
 
     def self.hmac(body)
-      OpenSSL::HMAC.hexdigest(OpenSSL::Digest::Digest.new('sha512'), CoinPayments.configuration.private_api_key, HTTParty::HashConversions.to_params(body))
+      OpenSSL::HMAC.hexdigest(OpenSSL::Digest::Digest.new('sha512'), configuration.private_api_key, HTTParty::HashConversions.to_params(body))
     end
 
     def self.api_call(args)
       body = required_params.merge!(cmd: caller[0][/`.*'/][1..-2]).merge!(args)
-      response = HTTParty.post(CoinPayments.configuration.base_uri, body: body, headers: {'hmac' => hmac(body)})
+      response = HTTParty.post(configuration.base_uri, body: body, headers: {'hmac' => hmac(body)})
       response['error'] == 'ok' ? Hashie::Mash.new(response['result']) : response['error']
     end
 
