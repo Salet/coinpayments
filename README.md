@@ -42,17 +42,17 @@ end
 - Optional paramteres can be appended as an option hash
 - Call response is a Hashie::Mash instance, so you can access response hash parameters as method calls. For example, to quicly access BTC/USD exchange rate, use:
 
-    CoinPayments.rates.USD.rate_btc
+`CoinPayments.rates.USD.rate_btc`
 
 ## Examples
 
 - Check current exchange rates:
 
-    CoinPayments.rates
+`CoinPayments.rates`
 
 - Check for cryptocurrencies you accept on  your account:
 
-    CoinPayments.rates(accepted: 1).delete_if {|k, v| v["accepted"] == 0}.keys
+`CoinPayments.rates(accepted: 1).delete_if {|k, v| v["accepted"] == 0}.keys`
 
 - Create a transaction for $10 that must be payed using BTC, and display an address to the user:
 
