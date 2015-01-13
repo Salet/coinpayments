@@ -5,7 +5,6 @@ module Coinpayments
 
     def copy_initializer
       template "coinpayments_initializer.rb", "config/initializers/coinpayments.rb"
-      p "Install complete! You can find your CoinPayments configuration file in config/initializers/coinpayments.rb"
     end
   end
 end
