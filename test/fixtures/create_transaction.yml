@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: US-ASCII
+      string: version=1&key=c51af8c4ac689987e2579a60dc1bc1354d5298837440c6f4759dff6cf9ae2f5f&cmd=create_transaction&amount=1&currency1=GBP&currency2=START
+    headers:
+      Hmac:
+      - !binary |-
+        YzExMTYyNzRjNzhlNmNmZGFkM2M3NjE3ZTJiOWI1NWEyNDU0NjFmM2NhMmU4
+        ODViZmE4Y2I3MzY0OWJlMDVhMWRjMGE0ZWUxMmNlZmZiOWQ0OGVlOGZkZTA0
+        NGFjZWRjYjhiMzNlOWJkMmY4YTMwMWRlMWFiMzkwY2Q2YmI0YTM=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jan 2015 13:54:49 GMT
+      Server:
+      - Apache/2.2.22 (Debian)
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u10
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - PHPSESSID=6gcj16g1fn456cm9538tvn1tln9o4oentoc6r6dd0699p1os0680; path=/; secure;
+        HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      Content-Length:
+      - '381'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"ok","result":{"amount":"5.17238838","txn_id":"705565b8b8f068566fed1a71977ece30265c6e80cf7dfe854ab4a455701129bc","address":"sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U","confirms_needed":"10","timeout":9000,"status_url":"https:\/\/www.coinpayments.net\/index.php?cmd=status&id=705565b8b8f068566fed1a71977ece30265c6e80cf7dfe854ab4a455701129bc&key=292651e00397dea648fa55c15d0140a9"}}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 13:54:50 GMT
+recorded_with: VCR 2.9.3

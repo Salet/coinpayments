@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: US-ASCII
+      string: version=1&key=c51af8c4ac689987e2579a60dc1bc1354d5298837440c6f4759dff6cf9ae2f5f&cmd=create_withdrawal&amount=1&currency=START&address=sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U
+    headers:
+      Hmac:
+      - !binary |-
+        Mzk3NDNmM2Y0NzY0Y2Y0ZDk2NzI4YmQyMjFhYmJlYzBjYjE4ZTJkNDk3Yjgy
+        MzZkZGFiOTQ1YWNmYmIyYzQ4YjE5MTUyNjFlZmM0YzlkZTk5YjllNDcwYzY5
+        Yzk5MDEzYTkzYjVkNDVmOTNlNDY4MGVkYTcwMjM5ZjJjMmJhODI=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jan 2015 14:05:36 GMT
+      Server:
+      - Apache/2.2.22 (Debian)
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u10
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - PHPSESSID=0mu70jagftjjr1qobaee1dt8ejfk2tiio9jrn27r13td11mvmkl1; path=/; secure;
+        HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"That amount is larger than your balance!"}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 14:05:37 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: US-ASCII
+      string: version=1&key=c51af8c4ac689987e2579a60dc1bc1354d5298837440c6f4759dff6cf9ae2f5f&cmd=rates
+    headers:
+      Hmac:
+      - !binary |-
+        YzU4MWYwNWUxN2Y3MDc3OTllOWYzODViODViNDFkMDZlZTQxYTIwZmYyMGE4
+        MzkzMjg2Zjc1ZmI0MTkzMTgxNzRiOWEzODU4YWZlNTBkYzBiYTllZDUzYjk1
+        YTFlYTkxOTlmMWU3N2Q5YjJmMDM3ZjAxZjZhYmNjM2ZlOWUxODg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jan 2015 13:56:00 GMT
+      Server:
+      - Apache/2.2.22 (Debian)
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u10
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - PHPSESSID=ridq2d950nbmj4spviv3p6ao980j4upurpop0st43k46bnvgn491; path=/; secure;
+        HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"ok","result":{"BTC":{"is_fiat":0,"rate_btc":"1.000000000000000000000000","last_update":"1375473661","name":"Bitcoin","confirms":"2"},"LTC":{"is_fiat":0,"rate_btc":"0.006613000000000000000000","last_update":"1421156461","name":"Litecoin","confirms":"3"},"USD":{"is_fiat":1,"rate_btc":"0.004249302499709100000000","last_update":"1421156461","name":"United
+        States Dollar","confirms":"10"},"EUR":{"is_fiat":1,"rate_btc":"0.005046547993418600000000","last_update":"1421156461","name":"Euro","confirms":"10"},"STR":{"is_fiat":0,"rate_btc":"0.000017932500000000000000","last_update":"1421156461","name":"Stellar","confirms":"30"},"XRP":{"is_fiat":0,"rate_btc":"0.000066382951301166000000","last_update":"1421156461","name":"Ripple","confirms":"30"},"AUD":{"is_fiat":1,"rate_btc":"0.003478706503664300000000","last_update":"1421156461","name":"Australian
+        Dollar","confirms":"10"},"BC":{"is_fiat":0,"rate_btc":"0.000079920000000000000000","last_update":"1421156461","name":"BlackCoin","confirms":"6"},"BRL":{"is_fiat":1,"rate_btc":"0.001432238280917600000000","last_update":"1421156461","name":"Brazilian
+        Real","confirms":"10"},"BTC.Coinex":{"is_fiat":0,"rate_btc":"1.000000000000000000000000","last_update":"1418877661","name":"Bitcoin","confirms":"30"},"BTC.SnapSwap":{"is_fiat":0,"rate_btc":"1.000000000000000000000000","last_update":"1375473661","name":"Bitcoin","confirms":"30"},"CAD":{"is_fiat":1,"rate_btc":"0.003557197070310000000000","last_update":"1421156461","name":"Canadian
+        Dollar","confirms":"10"},"CAPT":{"is_fiat":0,"rate_btc":"0.000004193333333333300000","last_update":"1421156461","name":"CAPTcoin","confirms":"10"},"CGB":{"is_fiat":0,"rate_btc":"0.000216782727272730000000","last_update":"1421152861","name":"CryptogenicBullion","confirms":"6"},"CHF":{"is_fiat":1,"rate_btc":"0.004175481140461700000000","last_update":"1421156461","name":"Swiss
+        Franc","confirms":"10"},"CLOAK":{"is_fiat":0,"rate_btc":"0.000027755000000000000000","last_update":"1421156461","name":"CloakCoin","confirms":"10"},"CNY":{"is_fiat":1,"rate_btc":"0.000688564050581910000000","last_update":"1421156461","name":"Chinese
+        Yuan","confirms":"10"},"CZK":{"is_fiat":1,"rate_btc":"0.000173280656333350000000","last_update":"1421156461","name":"Czech
+        Koruna","confirms":"10"},"DGC":{"is_fiat":0,"rate_btc":"0.000020073333333333000000","last_update":"1421156461","name":"DigitalCoin","confirms":"6"},"DOGE":{"is_fiat":0,"rate_btc":"0.000000594285714285710000","last_update":"1421156461","name":"Dogecoin","confirms":"3"},"DRK":{"is_fiat":0,"rate_btc":"0.006108250000000000000000","last_update":"1421156461","name":"DarkCoin","confirms":"5"},"DVC":{"is_fiat":0,"rate_btc":"0.000000047575662500000000","last_update":"1421156461","name":"Devcoin","confirms":"3"},"EAC":{"is_fiat":0,"rate_btc":"0.000000030000000000000000","last_update":"1421152861","name":"Earthcoin","confirms":"12"},"FLT":{"is_fiat":0,"rate_btc":"0.000000785000000000000000","last_update":"1421156461","name":"FlutterCoin","confirms":"10"},"FTC":{"is_fiat":0,"rate_btc":"0.000041868571428571000000","last_update":"1421156461","name":"Feathercoin","confirms":"3"},"GBP":{"is_fiat":1,"rate_btc":"0.006402576300417000000000","last_update":"1421156461","name":"British
+        Pound","confirms":"10"},"GLD":{"is_fiat":0,"rate_btc":"0.000012327222222222000000","last_update":"1421152861","name":"Goldcoin","confirms":"4"},"HKD":{"is_fiat":1,"rate_btc":"0.000548258142058840000000","last_update":"1421156461","name":"Hong
+        Kong Dollar","confirms":"10"},"HTML5":{"is_fiat":0,"rate_btc":"0.000000003902676400000000","last_update":"1421156461","name":"HTMLCOIN","confirms":"10"},"HYPER":{"is_fiat":0,"rate_btc":"0.000208518333333330000000","last_update":"1421156461","name":"Hyper","confirms":"10"},"IDR":{"is_fiat":1,"rate_btc":"0.000000332546376260850000","last_update":"1421156461","name":"Indonesian
+        Rupiah","confirms":"10"},"JPY":{"is_fiat":1,"rate_btc":"0.000035921351194362000000","last_update":"1421156461","name":"Japanese
+        Yen","confirms":"10"},"KRW":{"is_fiat":1,"rate_btc":"0.000003939564136765300000","last_update":"1421156461","name":"South
+        Korean Won","confirms":"10"},"KTK":{"is_fiat":0,"rate_btc":"0.000001200000000000000000","last_update":"1421156461","name":"KryptKoin","confirms":"10"},"LAK":{"is_fiat":1,"rate_btc":"0.000001000000000000000000","last_update":"1421156461","name":"Laotian
+        Kip","confirms":"10"},"MAX":{"is_fiat":0,"rate_btc":"0.000017657500000000000000","last_update":"1421156461","name":"Maxcoin","confirms":"7"},"MEC":{"is_fiat":0,"rate_btc":"0.000057200000000000000000","last_update":"1421156461","name":"Megacoin","confirms":"7"},"MINT":{"is_fiat":0,"rate_btc":"0.000000017500000000000000","last_update":"1421156461","name":"MintCoin","confirms":"10"},"MMC":{"is_fiat":0,"rate_btc":"0.000012637500000000000000","last_update":"1421156461","name":"MemoryCoin","confirms":"4"},"MNE":{"is_fiat":0,"rate_btc":"0.000010646666666667000000","last_update":"1421156461","name":"Munne","confirms":"10"},"MXN":{"is_fiat":1,"rate_btc":"0.000293792481381930000000","last_update":"1421156461","name":"Mexican
+        Peso","confirms":"10"},"MYR":{"is_fiat":0,"rate_btc":"0.000000230000000000000000","last_update":"1421156461","name":"MyriadCoin","confirms":"10"},"MZC":{"is_fiat":0,"rate_btc":"0.000000428666666666670000","last_update":"1421152861","name":"MazaCoin","confirms":"10"},"NET":{"is_fiat":0,"rate_btc":"0.000000547500000000000000","last_update":"1421156461","name":"Netcoin","confirms":"12"},"NMC":{"is_fiat":0,"rate_btc":"0.002060019044438600000000","last_update":"1421156461","name":"Namecoin","confirms":"3"},"NOBL":{"is_fiat":0,"rate_btc":"0.000000065625000000000000","last_update":"1421156461","name":"NobleCoin","confirms":"8"},"NVC":{"is_fiat":0,"rate_btc":"0.001791148400000000000000","last_update":"1421152861","name":"Novacoin","confirms":"3"},"NXT":{"is_fiat":0,"rate_btc":"0.000056202222222222000000","last_update":"1421156461","name":"NXT","confirms":"30"},"NZD":{"is_fiat":1,"rate_btc":"0.003419213326995600000000","last_update":"1421156461","name":"New
+        Zealand Dollar","confirms":"10"},"OMC":{"is_fiat":0,"rate_btc":"0.000006238181818181800000","last_update":"1421156461","name":"OmniCoin","confirms":"6"},"PLN":{"is_fiat":1,"rate_btc":"0.001137120664036700000000","last_update":"1421156461","name":"Polska
+        Zloty","confirms":"10"},"PND":{"is_fiat":0,"rate_btc":"0.000000033000000000000000","last_update":"1421156461","name":"PandaCoin","confirms":"8"},"POT":{"is_fiat":0,"rate_btc":"0.000004967500000000000000","last_update":"1421156461","name":"PotCoin","confirms":"5"},"PPC":{"is_fiat":0,"rate_btc":"0.001492940000000000000000","last_update":"1421156461","name":"Peercoin","confirms":"2"},"QRK":{"is_fiat":0,"rate_btc":"0.000016490000000000000000","last_update":"1421156461","name":"Quark","confirms":"3"},"RUB":{"is_fiat":1,"rate_btc":"0.000063430516554250000000","last_update":"1421156461","name":"Russian
+        Ruble","confirms":"10"},"SEK":{"is_fiat":1,"rate_btc":"0.000479092781868130000000","last_update":"1421156461","name":"Swedish
+        Krona","confirms":"10"},"SGD":{"is_fiat":1,"rate_btc":"0.003169434274499500000000","last_update":"1421156461","name":"Singapore
+        Dollar","confirms":"10"},"SLG":{"is_fiat":0,"rate_btc":"0.000036167500000000000000","last_update":"1421156461","name":"Sterlingcoin","confirms":"10"},"SPT":{"is_fiat":0,"rate_btc":"0.000000511818181818180000","last_update":"1421152861","name":"Spots","confirms":"4"},"START":{"is_fiat":0,"rate_btc":"0.001237837500000000000000","last_update":"1421156461","name":"StartCOIN","confirms":"10"},"THB":{"is_fiat":1,"rate_btc":"0.000130677310809270000000","last_update":"1421156461","name":"Thai
+        Baht","confirms":"10"},"TIT":{"is_fiat":0,"rate_btc":"0.000002608181818181800000","last_update":"1421156461","name":"TitCoin","confirms":"10"},"TWD":{"is_fiat":1,"rate_btc":"0.000134737549044460000000","last_update":"1421156461","name":"New
+        Taiwan Dollar","confirms":"10"},"UNO":{"is_fiat":0,"rate_btc":"0.008697500000000000000000","last_update":"1421156461","name":"Unobtanium","confirms":"7"},"USD.SnapSwap":{"is_fiat":0,"rate_btc":"0.004249302499709100000000","last_update":"1421156461","name":"United
+        States Dollar","confirms":"30"},"VIA":{"is_fiat":0,"rate_btc":"0.000101475714285710000000","last_update":"1421156461","name":"Viacoin","confirms":"10"},"VRC":{"is_fiat":0,"rate_btc":"0.000035050909090909000000","last_update":"1421156461","name":"VeriCoin","confirms":"10"},"VTC":{"is_fiat":0,"rate_btc":"0.000056957142857143000000","last_update":"1421156461","name":"Vertcoin","confirms":"7"},"WDC":{"is_fiat":0,"rate_btc":"0.000023838571428571000000","last_update":"1421156461","name":"Worldcoin","confirms":"6"},"XPM":{"is_fiat":0,"rate_btc":"0.000234060000000000000000","last_update":"1421156461","name":"PrimeCoin","confirms":"3"},"XST":{"is_fiat":0,"rate_btc":"0.000025556666666667000000","last_update":"1421156461","name":"StealthCoin","confirms":"10"},"ZAR":{"is_fiat":1,"rate_btc":"0.000360446336449000000000","last_update":"1421156461","name":"South
+        African Rand","confirms":"10"},"ZEIT":{"is_fiat":0,"rate_btc":"0.000000005967494708457700","last_update":"1421152861","name":"ZeitCoin","confirms":"10"},"ZET":{"is_fiat":0,"rate_btc":"0.000003866666666666700000","last_update":"1421156461","name":"Zetacoin","confirms":"8"},"LTCT":{"is_fiat":0,"rate_btc":"1.000000000000000000000000","last_update":"1375473661","name":"Litecoin
+        Testnet","confirms":"1"}}}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 13:56:00 GMT
+recorded_with: VCR 2.9.3
