@@ -1,4 +1,4 @@
-# CoinPayments.net API library
+# CoinPayments.net API ruby gem
 
 This is a convenient wrapper around CoinPayments.net API (https://www.coinpayments.net/merchant-tools-api).
 
