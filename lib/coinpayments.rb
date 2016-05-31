@@ -60,7 +60,7 @@ module Coinpayments
       api_call(args)
     end
   
-    def self.get_new_address(currency, ipn_url)  
+    def self.get_callback_address(currency, ipn_url)  
       args = { currency: currency, ipn_url: ipn_url }
       api_call(args)
     end
