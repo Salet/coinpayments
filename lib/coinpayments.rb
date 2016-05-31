@@ -59,6 +59,11 @@ module Coinpayments
       args = { txid: txid }
       api_call(args)
     end
+  
+    def self.get_new_address(currency, ipn_url)  
+      args = { currency: currency, ipn_url: ipn_url }
+      api_call(args)
+    end
 
     def self.get_withdrawal_info(id)
       args = { id: id }
