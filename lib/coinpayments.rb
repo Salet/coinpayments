@@ -19,14 +19,14 @@ module Coinpayments
   private
     def self.configuration
       @configuration ||=  Configuration.new
-    end    
+    end
 
     def self.required_params
       { version: configuration.version, key: configuration.public_api_key }
     end
 
     def self.hmac(body)
-      OpenSSL::HMAC.hexdigest(OpenSSL::Digest::Digest.new('sha512'), configuration.private_api_key, HTTParty::HashConversions.to_params(body))
+      OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha512'), configuration.private_api_key, HTTParty::HashConversions.to_params(body))
     end
 
     def self.api_call(args)
@@ -55,7 +55,7 @@ module Coinpayments
       api_call(args)
     end
 
-    def self.get_tx_info(txid)  
+    def self.get_tx_info(txid)
       args = { txid: txid }
       api_call(args)
     end
