@@ -1,6 +1,11 @@
-# CoinPayments.net API ruby gem
+# CoinPayments.net API Client
+[![Gem Version](https://badge.fury.io/rb/coinpayments.svg)](https://badge.fury.io/rb/coinpayments) [![Build Status](https://travis-ci.org/Salet/coinpayments.svg?branch=master)](https://travis-ci.org/Salet/coinpayments) [![Code Climate](https://codeclimate.com/github/Salet/coinpayments/badges/gpa.svg)](https://codeclimate.com/github/Salet/coinpayments)
 
-This is a convenient wrapper around CoinPayments.net API (https://www.coinpayments.net/merchant-tools-api).
+[CoinPayments](https://www.coinpayments.net) | [API Documentation](https://www.coinpayments.net/merchant-tools-api) | [Usage](#usage)
+
+CoinPayments.net is a payment gateway that can allow you to accept Bitcoin, Litecoin, Ether and over [50 other popular cryptocurrencies](https://www.coinpayments.net/supported-coins) directly on your website. 
+
+This gem will let you to easily communicate with their API directly from your Ruby application. Want to accept Doge, Dash, START, or other less popular cryptocurrency? Search no more!
 
 ## Installation
 
@@ -18,29 +23,30 @@ Or install it yourself as:
 
 ## Configuration
 
-Before using this gem you have to set your Merchant ID and public/private API key pair, which can be accessed on your account at CoinPayments.net.
+Before using this gem you will have to create an account on Coinpayments website. After that you can access your [Merchant ID](https://www.coinpayments.net/acct-settings) and generate [public/private API key pair](https://www.coinpayments.net/acct-api-keys) needed for this gem to work.
 
 If you are using Rails, simply generate a new config file, like so:
 
     $ rails generate coinpayments:install
 
-Configuration file can now be accessed at config/initializers/coinpayments.rb:
+Configuration file can now be accessed at `config/initializers/coinpayments.rb`:
 
 ```
 Coinpayments.configure do |config|
-  config.merchant_id = ''
-  config.public_api_key = ''
+  config.merchant_id     = ''
+  config.public_api_key  = ''
   config.private_api_key = ''
 end
 ```
 
 ## Usage
+`Coinpayments` is a singleton class with method names mimicking the command names of [CP API](https://www.coinpayments.net/merchant-tools-api). 
 
-- All method and field names are identical to official API documentation: https://www.coinpayments.net/merchant-tools-api.
-- Main required fields are appended to each call you make automatically.
-- Method required paramteres must be appended as method attributes.
-- Optional paramteres can be appended as an option hash
-- Call response is a Hashie::Mash instance, so you can access response hash parameters as method calls. For example, to quicly access BTC/USD exchange rate, use:
+Common required fields are automatically appended to each call. Other of the required parameters must be passed in as method attributes. You can add some optional parameters too. 
+
+For your convenience response fields can be accessed as method calls.
+
+For example, to quickly access current BTC/USD exchange rate, use:
 
 `Coinpayments.rates.USD.rate_btc`
 
@@ -52,7 +58,7 @@ end
 
 - Check for cryptocurrencies you accept on  your account:
 
-`Coinpayments.rates(accepted: 1).delete_if {|k, v| v["accepted"] == 0}.keys`
+`Coinpayments.rates(accepted: 1).delete_if { |_k, v| v["accepted"] == 0 }.keys`
 
 - Create a transaction for $10 that must be payed using BTC, and display an address to the user:
 
