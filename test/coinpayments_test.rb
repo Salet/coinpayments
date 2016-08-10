@@ -49,4 +49,20 @@ class CoinpaymentsTest < Minitest::Test
       assert r.respond_to?(:status_text)
     end
   end
+
+  def test_get_callback_address
+    VCR.use_cassette('get_callback_address') do
+      r = Coinpayments.get_callback_address('BTC')
+      assert r.kind_of?(Hash)
+      assert r.respond_to?(:address)
+    end
+  end
+
+  def test_get_withdrawal_info
+    VCR.use_cassette('get_withdrawal_info') do
+      r = Coinpayments.get_withdrawal_info('705565b8b8f068566fed1a71977ece30265c6e80cf7dfe854ab4a455701129bc')
+      assert r.kind_of?(Hash)
+      assert r.respond_to?(:status_text)
+    end
+  end
 end

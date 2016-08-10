@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.name          = "coinpayments"
   spec.version       = Coinpayments::VERSION
   spec.authors       = ["Przemysław Janowski"]
-  spec.email         = ["przemyslaw.janowski@outlook.com"]
-  spec.summary       = "Convenient wrapper around CoinPayments.net API."
+  spec.email         = ["p.janowski@outlook.com"]
+  spec.summary       = "Ruby client for the CoinPayments.net API"
   spec.homepage      = "https://github.com/Salet/coinpayments"
   spec.license       = "MIT"
 

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: UTF-8
+      string: version=1&key=ab62e52f47fb2e7032a3a678e8cfd66ed1e2beaa56edf0aa722d8fb15bd7afd0&cmd=get_callback_address&currency=BTC
+    headers:
+      Hmac:
+      - 389fd0db5e417387dd86023408066ab10392a55a3271a010cc23bbc2b5a1cdb8c8dc410d8304aab6b164df12776066cbfade0e0cd9a7a8220d7bd8115a0f73aa
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Aug 2016 20:03:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - PHPSESSID=5c5pq7m5525sgdmdl6bb44dnn94jgn2ers0g4bevr3h7i5e4oh01; path=/; secure;
+        HttpOnly
+      - __cfduid=d73d7415d9e6270ef5be064e73c9891751470859410; expires=Thu, 10-Aug-17
+        20:03:30 GMT; path=/; domain=.coinpayments.net; HttpOnly
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u4
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=2592000
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2d060d34718446c8-WAW
+    body:
+      encoding: UTF-8
+      string: '{"error":"ok","result":{"address":"18ahwWe9N1x7iHdnQYDDBT4E1buB7fcKwo"}}'
+    http_version: 
+  recorded_at: Wed, 10 Aug 2016 20:03:31 GMT
+recorded_with: VCR 3.0.1

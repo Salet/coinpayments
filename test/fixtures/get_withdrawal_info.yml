@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: UTF-8
+      string: version=1&key=ab62e52f47fb2e7032a3a678e8cfd66ed1e2beaa56edf0aa722d8fb15bd7afd0&cmd=get_withdrawal_info&id=705565b8b8f068566fed1a71977ece30265c6e80cf7dfe854ab4a455701129bc
+    headers:
+      Hmac:
+      - e2d725237384a3c99249c72b379fb72371b97d3c3116ef14652c3aa421ba0332c9c5d3eef42214cdd98d31e8598ef98ee5191c601aed21068fd80b3c3a131761
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Aug 2016 20:09:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '197'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - PHPSESSID=lk1ev291daa5g7tns7kf3q4rq9ehngeg6emn0ji8d2phupmb3l41; path=/; secure;
+        HttpOnly
+      - __cfduid=d3baeb8f863a17477339aca69ccf1fc861470859775; expires=Thu, 10-Aug-17
+        20:09:35 GMT; path=/; domain=.coinpayments.net; HttpOnly
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u4
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=2592000
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2d06161d6e362af1-WAW
+    body:
+      encoding: UTF-8
+      string: '{"error":"ok","result":{"time_created":1391924372,"status":2,"status_text":"Complete","coin":"BTC","amount":40000000,"amountf":"0.40000000","send_address":"1BitcoinAddress","send_txid":"hex_txid"}}'
+    http_version:
+  recorded_at: Wed, 10 Aug 2016 20:09:36 GMT
+recorded_with: VCR 3.0.1

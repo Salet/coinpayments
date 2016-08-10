@@ -59,9 +59,9 @@ module Coinpayments
       args = { txid: txid }
       api_call(args)
     end
-  
-    def self.get_callback_address(currency, ipn_url)  
-      args = { currency: currency, ipn_url: ipn_url }
+
+    def self.get_callback_address(currency, options = {})
+      args = { currency: currency }.merge!(options)
       api_call(args)
     end
 
