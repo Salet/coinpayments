@@ -70,4 +70,8 @@ module Coinpayments
       api_call(args)
     end
 
+    def self.sign(callback_body)
+      OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha512'),
+                              configuration.secret_phrase,callback_body)
+    end
 end
