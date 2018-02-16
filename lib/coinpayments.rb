@@ -55,6 +55,10 @@ module Coinpayments
       api_call(args)
     end
 
+    def self.create_mass_withdrawal(withdrawals)
+      api_call(withdrawals)
+    end
+
     def self.get_tx_info(txid)
       args = { txid: txid }
       api_call(args)

@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.coinpayments.net/api.php
+    body:
+      encoding: UTF-8
+      string: version=1&key=8e2d03e5b7778e7ca2bb7299d8480141c9b66849520b40ec23d4d181392831db&cmd=create_mass_withdrawal&wd[wd1][amount]=1&wd[wd1][address]=sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U&wd[wd1][currency]=START&wd[wd2][amount]=2&wd[wd2][address]=sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U&wd[wd2][currency]=START
+    headers:
+      Hmac:
+      - c3df4f4f69b847dbf3035c39f45d94ecdc07a66c326525164028ce4f173ddc168d63e991f607fb7ee36b240b5a502e518733d1453b990347e06a2f3f93704db2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Feb 2018 10:37:41 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - sameorigin
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - PHPSESSID=20a5h814i2fjhsbckld7o67ob48f1ib7; path=/; secure; HttpOnly
+      - incap_ses_375_992349=AFfAVWXHGBr/giKqmkQ0BXW0hloAAAAAMBlIYON2guIlAfo7x63nSQ==;
+        path=/; Domain=.coinpayments.net
+      - visid_incap_992349=jGNVOmMQT4WlxPNfz1WnpnW0hloAAAAAQUIPAAAAAADp+GUCASaXCO1dg1TjvL+y;
+        expires=Fri, 15 Feb 2019 13:36:21 GMT; path=/; Domain=.coinpayments.net
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Disposition:
+      - attachment; filename=coinpayments_api.json
+      Content-Length:
+      - '119'
+      Content-Type:
+      - application/json
+      X-Iinfo:
+      - 13-37462443-37462477 NNNN CT(77 79 0) RT(1518777460968 198) q(0 0 2 -1) r(3
+        3) U6
+      X-Cdn:
+      - Incapsula
+    body:
+      encoding: UTF-8
+      string: '{"error":"ok","result":{"wd1":{"error":"START is currently disabled!"},"wd2":{"error":"START
+        is currently disabled!"}}}'
+    http_version: 
+  recorded_at: Fri, 16 Feb 2018 10:37:41 GMT
+recorded_with: VCR 4.0.0
