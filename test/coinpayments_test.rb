@@ -42,6 +42,28 @@ class CoinpaymentsTest < Minitest::Test
     end
   end
 
+  def test_create_mass_withdrawal
+    VCR.use_cassette('create_mass_withdrawal') do
+      withdrawals = {wd: {
+          wd1: {
+            amount: 1,
+            address: 'sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U',
+            currency: 'START'
+          },
+          wd2: {
+            amount: 1,
+            address: 'sYo5A4vVBBV2SYbh7jPjocqg9DeNYqkP4U',
+            currency: 'START'
+          }
+        }
+      }
+      r = Coinpayments.create_mass_withdrawal(withdrawals)
+      assert r.kind_of?(Hash)
+      assert r.respond_to?(:wd1)
+      assert r.respond_to?(:wd2)
+    end
+  end
+
   def test_get_tx_info
     VCR.use_cassette('get_tx_info') do
       r = Coinpayments.get_tx_info('705565b8b8f068566fed1a71977ece30265c6e80cf7dfe854ab4a455701129bc')
