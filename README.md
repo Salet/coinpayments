@@ -36,6 +36,7 @@ Coinpayments.configure do |config|
   config.merchant_id     = ''
   config.public_api_key  = ''
   config.private_api_key = ''
+  config.secret_phrase   = ''
 end
 ```
 
@@ -65,6 +66,13 @@ For example, to quickly access current BTC/USD exchange rate, use:
 ```
 transaction = Coinpayments.create_transaction(10, 'USD', 'BTC')
 @address = transaction.address
+```
+- You can recieve IPN callbacks after payments on API-generated addresses.
+Coinpayments server generates signature based on your secret phrase and row 
+body of POST request to your custom API. You can easily compare signatures
+to verify callback using 
+```
+Coinpayments.sign('IPN POST request row body')
 ```
 
 ## Contributing

@@ -65,4 +65,11 @@ class CoinpaymentsTest < Minitest::Test
       assert r.respond_to?(:status_text)
     end
   end
+
+  def test_sign
+    VCR.use_cassette('sign') do
+      r = Coinpayments.sign('Secret Phrase')
+      assert r.size == 128
+    end
+  end
 end
