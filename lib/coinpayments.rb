@@ -55,6 +55,11 @@ module Coinpayments
       api_call(args)
     end
 
+    def self.convert(amount, from, to, options ={})
+    args = { amount: amount, from: from, to: to, address: address, dest_tag: dest_tag }.merge!(options)
+    api_call(args)
+    end
+
     def self.create_mass_withdrawal(withdrawals)
       api_call(withdrawals)
     end
